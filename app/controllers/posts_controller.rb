@@ -26,7 +26,8 @@ class PostsController < ApplicationController
 	def create
 		@post = Post.new(post_params(:title, :description))
 		@post.save
-		redirect_to post_path(@post) 
+		#redirect_to post_path(@post) 
+		redirect_to action: "index"
  	  end
 
 	# def update
